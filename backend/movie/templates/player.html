@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Custom Video Player with Canvas</title>
+    <link href=" {% static 'dh_player/css/main.css' %}" rel="stylesheet">
+    <link href=" {% static 'chat/css/main.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="responseData" data-response="{{ response }}"></div>
+    <div class="video-container">
+            <canvas id="canvas" class="canvas"></canvas>
+            <div class="subtitles-container"></div>
+            <div class="panel-container" id="panelContainer">
+                <div class="chat-container" id="chat-container">
+                    <div class="chat-header">
+                        <span class="chat-title">Messager</span>
+                        <button class="dialogs-btn" id="toggle-dialogs">Dialogs</button>
+                    </div>
+                    <div class="chat-log-container">
+                        <div class="messages" id="chat-log"></div>
+                    </div>
+                    <div>
+                        <input id="chat-message-input" type="text" placeholder="Введите сообщение">
+                        <button class="send" id="chat-message-submit">
+                            <i id="chat-message-submit-icon" class="material-icons">send</i> Отправить
+                        </button>
+                    </div>
+                </div>
+                <div class="subtitles-menu-container" id="subtitlesMenuContainer">
+                    <div class="subtitles-menu" id="subtitlesMenu"></div>
+                </div>
+                <div class="controls-container">
+                    <div class="time-container">
+                        <div class="current-time"><span id="currentTime">0:00</span></div>
+                        <div class="duration-time"><span id="duration">0:00</span></div>
+                    </div>
+                    <div class="scale-container">
+                        <input type="range" class="progress-range" id="progressRange" min="0" value="0">
+                    </div>
+                    <div class="button-container">
+                        <div class="left-btn">
+                            <button class="play-button" id="playBtn"></button>
+                            <button class="pause-button" id="pauseBtn"></button>
+    <!--                        <input class="volume-range" id="volumeRange" type="range" min="0" max="1" step="0.1" value="1">-->
+                        </div>
+                        <div class="right-btn">
+                            <button class="message-btn" id="messageBtn">mes</button>
+                            <button class="subtitles-btn" id="subtitlesBtn">SUBT</button>
+                            <button class="fullscreen-btn" id="fullscreenBtn">FULL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>        
+    <script type="module" src=" {% static 'dh_player/js/main.js' %}"></script>
+    <script src=" {% static 'chat/js/chat.js' %}"></script>
+    <script src=" {% static 'dh_player/js/hls.js/dist/hls.js' %}"></script>
+    <script src=" {% static 'dh_player/js/dashjs/dist/dash.all.min.js' %}"></script>
+</body>
+</html>

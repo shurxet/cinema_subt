@@ -1,0 +1,22 @@
+#chat-message-submit {
+    padding: 12px 20px;
+    background-color: #a2e8af; /*#007acc;*/
+    color: #333; /*white;*/
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Добавлены анимации перехода */
+    display: flex;
+    align-items: center;
+    opacity: 0; /* Начальная непрозрачность */
+}
+
+#chat-message-submit-icon {
+    margin-right: 8px;
+}
+
+#chat-message-submit:hover {
+    background-color: #a2e8af; /*#005a8c;*/
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавлен тень при наведении */
+}

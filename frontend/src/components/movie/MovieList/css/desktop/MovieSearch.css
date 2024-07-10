@@ -1,0 +1,8 @@
+/* Стили для компьютера (не мобильных устройств) */
+
+@media only screen and (min-width: 1081px) {
+    .searchMoviesContainer {
+        display: flex;
+        width: 100%;
+    }
+}

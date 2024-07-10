@@ -1,0 +1,49 @@
+// Dash command
+
+ffmpeg -i classroom.mp4 -map 0 -map 0 -c:a aac -c:v libx264 -b:v:0 800k -b:v:1 300k -var_stream_map "v:0,name:800k v:1,name:300k" -f dash -dash_segment_type mp4 -single_file 1 classroom_manifest.mpd
+
+// HLS command
+
+ffmpeg -i classroom.mp4 -map 0 -map 0 -c:a aac -b:v:0 800k -b:v:1 300k -var_stream_map "v:0,name:800k v:1,name:300k" -master_pl_name classroom_manifest.m3u8 -f hls -hls_flags single_file -hls_playlist_type vod -hls_segment_filename "classroom_%v/classroom.ts" classroom_%v/index.m3u8
+
+
+========================================================================================================================
+
+
+
+
+// HLS command
+ffmpeg -i A.Beautiful.Planet.s01s01.mp4 -c:v copy -c:a copy -hls_time 10 -hls_list_size 0 output.m3u8
+
+
+
+// Dash command
+ffmpeg -i file.mp4 \
+       -c:v libx264 -crf 20 -g 48 -keyint_min 48 -sc_threshold 0 \
+       -map 0:v:0 -b:v:0 1000k \
+       -map 0:v:0 -b:v:1 2000k \
+       -map 0:v:0 -b:v:2 4000k \
+       -map 0:a:0 -b:a:0 128k \
+       -map 0:a:0 -b:a:1 256k \
+       -map 0:a:0 -b:a:2 512k \
+       -map 0:s:0 \
+       -f dash output.mpd
+
+// Dash command
+ffmpeg -i file.mp4 \
+       -c:v libx264 -crf 20 -g 48 -keyint_min 48 -sc_threshold 0 \
+       -map 0:v:0 -b:v:0 1000k \
+       -map 0:v:0 -b:v:1 2000k \
+       -map 0:v:0 -b:v:2 4000k \
+       -map 0:a:0 -b:a:0 128k \
+       -map 0:a:0 -b:a:1 256k \
+       -map 0:a:0 -b:a:2 512k \
+       -f dash output.mpd
+
+
+// Dash command adaptive bitrade 1000k  2000k 4000k
+ffmpeg -i The.Boys.s01s02.mp4 -c:v libx264 -crf 20 -g 48 -keyint_min 48 -sc_threshold 0 -map 0:v:0 -b:v:0 1000k -map 0:v:0 -b:v:1 2000k -map 0:v:0 -b:v:2 4000k -map 0:a:0 -b:a:0 128k -map 0:a:0 -b:a:1 256k -map 0:a:0 -b:a:2 512k -f dash -segment_time 3 ./dash/output.mpd
+
+
+// Dash command adaptive bitrade 1000k  2000k 4000k
+ffmpeg -i A.Beautiful.Planet.s01s01.mp4 -c:v libx264 -crf 20 -g 48 -keyint_min 48 -sc_threshold 0 -map 0:v:0 -b:v:1 2000k -map 0:a:0 -b:a:1 256k -f dash -segment_time 3 ./dash/output.mpd

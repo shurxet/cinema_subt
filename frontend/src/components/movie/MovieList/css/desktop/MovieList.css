@@ -1,0 +1,55 @@
+/* Стили для компьютера (не мобильных устройств) */
+
+@media only screen and (min-width: 1081px) {
+    .block {
+        width: 14.3%;
+        overflow: hidden;
+        background-color: #2b2d2e;
+        margin-bottom: 4%; /* Расстояние между блоками */
+        transition: filter 0.3s ease; /* Плавный переход для изменения свойства filter */
+    }
+
+    .link_block {
+        width: 100%;
+        text-decoration: none; /* Убираем подчёркивание */
+        background-color: #2b2d2e;
+        transition: filter 0.3s ease; /* Плавный переход для изменения свойства filter */
+    }
+
+    .poster_item {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        object-fit: contain; /* Изображение будет вписано в контейнер, сохраняя пропорции */
+        transition: filter 0.3s ease; /* Плавный переход для изменения свойства filter */
+    }
+
+    .content_block {
+        top: 0;
+        width: 100%;
+        background-color: #2b2d2e;
+        transition: filter 0.3s ease; /* Плавный переход для изменения свойства filter */
+    }
+
+    .block_title {
+        width: 100%;
+        height: 100%;
+        background-color: #2b2d2e;
+        transition: filter 0.3s ease; /* Плавный переход для изменения свойства filter */
+    }
+
+    .text_title {
+        color: gray;
+        font-size: 100%;
+        transition: filter 0.3s ease; /* Плавный переход для изменения свойства filter */
+
+    }
+
+    .block .link-block .poster_item .content_block .block_title text_title:hover {
+        filter: brightness(150%); /* Увеличиваем яркость на 10% при удерживании кнопки мыши */
+    }
+
+    .block .link_block .poster_item .content_block .block_title text_title:active {
+        filter: brightness(150%); /* Увеличиваем яркость на 10% при удерживании кнопки мыши */
+    }
+}

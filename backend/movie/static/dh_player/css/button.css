@@ -1,0 +1,182 @@
+.button-container {
+    height: 100%;
+    /*font-size: 10px;*/
+    width: 100%;
+    margin-top: 10px;
+    /*margin-bottom: 10px;*/
+    display: flex;
+    border-radius: 5px;
+}
+
+.left-btn {
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+    text-align: left;
+}
+
+.play-button {
+  /*content: '\25B6'; !* Символ плей *!*/
+  font-size: 30px;
+  width: 0;
+  height: 100%;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 23px solid #999; /* Измените цвет и размер треугольника здесь */
+  border-right: 0;
+  background-color: transparent;
+  color: #999;
+  transition: border-left-color 0.3s; /* добавим плавное изменение цвета */
+  cursor: pointer;
+  user-select: none;
+  padding: 0; /* Убираем отступы */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0; /* Убираем внешние отступы */
+}
+
+.play-button:focus {
+  outline: none;
+}
+
+.play-button:hover {
+  border-left-color: #fff; /* цвет при наведении */
+}
+
+.pause-button {
+    width: 28px;
+    height: 28px;
+    display: none;
+    background-color: transparent;
+    position: relative;
+    border: none;
+}
+
+.pause-button::before,
+.pause-button::after {
+    content: "";
+    /*color: white;*/
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    width: 6px;
+    background-color: #999;
+    transition: background-color 0.3s; /* добавим плавное изменение цвета */
+    border-radius: 3px;
+}
+
+.pause-button::before {
+    left: 0;
+}
+
+.pause-button::after {
+    right: 6px;
+}
+
+.pause-button:hover::before,
+.pause-button:hover::after {
+    background-color: #fff; /* цвет при наведении */
+}
+
+.right-btn {
+    height: 100%;
+    width: 60%;
+    display: inline-block;
+    text-align: right;
+}
+
+.message-btn {
+    position: relative;
+    display: inline-block;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    border: none;
+}
+
+.message-btn::before {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translateX(100%) rotate(60deg);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #007bff;
+}
+
+/*.message-btn:hover::before {*/
+/*    !*top: 70%;*!*/
+/*}*/
+
+.message-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Стили для кнопки */
+.subtitles-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ceba7a;
+  user-select: none;
+  /*background: linear-gradient(to right, #4e54c8, #8f94fb);*/
+  /*background-color: rgba(255, 0, 0, 0.5); !* красный цвет с прозрачностью 50% *!*/
+  /*background: linear-gradient(135deg, #4e54c8, #ffffff);*/
+  /*background: linear-gradient(to right, rgba(206, 186, 122, 0.6), rgba(255, 255, 255, 0.5), rgba(206, 186, 122, 0.6));*/
+  background: linear-gradient(130deg, rgba(100, 130, 175, 0.5), darkgray);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Стили для кнопки при наведении */
+.subtitles-btn:hover {
+  background: linear-gradient(130deg, darkgray, rgba(100, 130, 175, 0.5));
+  transform: translateY(-2px);
+}
+
+/* Стили для кнопки при нажатии */
+.subtitles-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.fullscreen-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ceba7a;
+  user-select: none;
+  /*background-color: #a2e8af;*/
+  background: linear-gradient(130deg, rgba(100, 130, 175, 0.5), darkgray);
+  /*background: linear-gradient(to right, rgba(206, 186, 122, 0.8), rgba(255, 255, 255, 0.5), rgba(206, 186, 122, 0.8));*/
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Стили для кнопки при наведении */
+.fullscreen-btn:hover {
+  background: linear-gradient(130deg, darkgray, rgba(100, 130, 175, 0.5));
+  /*background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(206, 186, 122, 0.8));*/
+  transform: translateY(-2px);
+}
+
+/* Стили для кнопки при нажатии */
+.fullscreen-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}

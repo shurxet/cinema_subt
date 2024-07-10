@@ -1,0 +1,59 @@
+/* Обновленные стили контейнера */
+.StyledContainer {
+  padding: 20px;
+  background-color: #f8f9fa; /* добавлен фон */
+}
+
+/* Обновленные стили заголовка */
+.PaperTitle {
+  color: #2c3e50; /* обновлен цвет текста */
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* обновлен шрифт */
+}
+
+/* Обновленные стили поисковой строки */
+.SearchBar {
+  margin-bottom: 20px;
+  border: 1px solid #ced4da; /* добавлена граница */
+  border-radius: 5px; /* добавлены скругленные углы */
+  padding: 10px; /* увеличен внутренний отступ */
+  background-color: #fff; /* добавлен фон */
+}
+
+/* Обновленные стили карточки тренажера */
+.TrainerCard {
+  border-radius: 10px; /* увеличен радиус скругления */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* увеличена тень */
+  transition: box-shadow 0.3s ease;
+}
+
+.TrainerCard:hover {
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2); /* увеличена тень при наведении */
+}
+
+/* Обновленные стили пагинации */
+.StyledPagination {
+  margin-top: 30px;
+}
+
+/* Обновленные стили кнопки плавающего действия */
+.FloatingActionButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff; /* добавлен цвет фона */
+  color: #fff; /* обновлен цвет текста */
+  border: none; /* убрана граница */
+  border-radius: 50%; /* сделана круглой форма */
+  width: 50px; /* увеличена ширина */
+  height: 50px; /* увеличена высота */
+  font-size: 24px; /* увеличен размер шрифта */
+  cursor: pointer; /* добавлен курсор */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* добавлена тень */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* добавлены анимации */
+}
+
+.FloatingActionButton:hover {
+  background-color: #0056b3; /* обновлен цвет фона при наведении */
+  transform: scale(1.1); /* увеличен размер при наведении */
+}

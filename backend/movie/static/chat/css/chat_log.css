@@ -1,0 +1,6 @@
+.chat-log-container {
+    flex: 1;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    scroll-behavior: smooth; /* Добавлено для плавной прокрутки */
+}

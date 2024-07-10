@@ -1,0 +1,83 @@
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+/* Добавленные стили для блоков сообщений */
+.message {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Стили для блока с текстом сообщения */
+.message-text {
+    position: relative;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 70%;
+    animation: slideIn 0.5s ease-in-out forwards;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
+
+/* Стили для исходящего сообщения */
+.message-text.outgoing {
+    background-color: #a2e8af; /* #2a9df4; Голубой цвет */
+    /*color: #fff;*/
+    color: #333;
+    align-self: flex-end;
+}
+
+.message-text.outgoing::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 40px 10px 0; /* Меняйте значения, чтобы настроить размер вытянутого угла */
+    border-color: transparent #a2e8af transparent transparent;
+}
+
+/* Стили для входящего сообщения */
+.message-text.incoming {
+    background-color: #3f3f3f; /* Темно-серый цвет */
+    color: #fff;
+    align-self: flex-start;
+}
+
+.message-text.incoming::before {
+    content: '';
+    position: absolute;
+    top: -0px;
+    right: -20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 10px 40px; /* Меняйте значения, чтобы настроить размер вытянутого угла */
+    border-color: transparent transparent transparent #3f3f3f;
+}
+
+/* Стили для блока с временем */
+.timestamp {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.timestamp-outgoing {
+    align-self: flex-end;
+}
+
+.timestamp-incoming {
+    align-self: flex-start;
+}

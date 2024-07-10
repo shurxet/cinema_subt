@@ -1,0 +1,223 @@
+.userDetails {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 80%;
+    color: #495057;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+  .trainerButtonContainer {
+    display: flex;
+    /*width: 100%;*/
+    /*flex-direction: row;*/
+    /*left: 0;*/
+  }
+
+  .trainerButton {
+    padding: 10px 20px;
+    margin: 10px 0;
+    /*margin-left: auto;*/
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .trainerButton:hover {
+      background-color: #0056b3;
+  }
+
+.profileAvatarWrapper {
+    display: flex;
+    width: 14.5rem;
+    height: 14.5rem;
+    overflow: hidden;
+    user-select: none;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0.1rem solid transparent;
+    background: linear-gradient(135deg, #4b0082 0%, #ec1f63 100%);
+}
+
+.profileAvatarContainer {
+    display: flex;
+    width: 13.5rem;
+    height: 13.5rem;
+    overflow: hidden;
+    user-select: none;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0.3rem solid white;
+    background-color: #2b2d2e;
+}
+
+.profileAvatarImgContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    background-color: #2b2d2e;
+}
+
+.profileAvatarImg {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    object-fit: cover;
+    background-color: #2b2d2e;
+}
+
+.profileAvatarImg:active, .profileAvatarImg:hover{
+    filter: brightness(150%);
+}
+
+.editingForm {
+    width: 30rem;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.closeContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeButton {
+    color: #333;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+    color: #007BFF;
+}
+
+.userName {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10%;
+    color: #343a40;
+}
+
+.inputField {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputField:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.userInfo {
+    /*width: 100%;*/
+    text-align: left;
+
+}
+
+.userBio {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    color: #495057;
+    background-color: #f8f9fa;
+}
+
+.editButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.editButton {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.editButton:hover {
+    background-color: #0056b3;
+}
+
+.saveButton {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.saveButton:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+
+
+/* mobile max-width: 1080px */
+@media only screen and (max-width: 1080px) {
+    .userDetails {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .editingForm {
+        width: 100%;
+
+    }
+}

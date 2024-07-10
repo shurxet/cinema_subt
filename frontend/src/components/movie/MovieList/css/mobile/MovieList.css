@@ -1,0 +1,58 @@
+/* mobile max-width: 1080px */
+@media only screen and (max-width: 1080px) {
+    .block {
+        width: 30%;
+        cursor: pointer;
+        user-select: none;
+        margin-bottom: 15%; /* Расстояние между блоками */
+    }
+
+    .link_block {
+        width: 100%;
+        cursor: pointer;
+        border-radius: 10px;
+        user-select: none;
+        text-decoration: none; /* Убираем подчёркивание */
+    }
+
+    .poster_item {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        user-select: none;
+        object-fit: cover; /* Изображение будет вписано в контейнер, сохраняя пропорции */
+    }
+
+    .content_block {
+        top: 0;
+        width: 100%;
+        height: 20px;
+        user-select: none;
+    }
+
+    .block_title {
+        width: 100%;
+        user-select: none;
+    }
+
+    .text_title {
+        color: gray;
+        font-size: 1rem;
+        user-select: none;
+
+    }
+
+    .block .link_block .poster_item .content_block .block_title .text_title:active {
+        user-select: none;
+        filter: brightness(150%); /* Увеличиваем яркость на 10% при удерживании кнопки мыши */
+    }
+}
+
+
+/* mobile max-width: 1080px orientation */
+@media only screen and (max-width: 1080px) and (orientation: landscape) {
+    .block {
+        width: 15%;
+        margin-bottom: 10%; /* Расстояние между блоками */
+    }
+}

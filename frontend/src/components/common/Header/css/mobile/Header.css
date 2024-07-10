@@ -1,0 +1,220 @@
+/* mobile max-width: 1080px */
+@media only screen and (max-width: 1080px) {
+    .panel_container {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        height: 5rem;
+        z-index: 60;
+        top: 0;
+        right: 0; /* Пример позиционирования справа */
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавим тень */
+        margin: 0;
+
+    }
+
+    .logo_container {
+        margin-left: 2%;
+    }
+
+    /* Стили для контейнера кнопок */
+    .button_container {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Расстояние между кнопками */
+        margin-left: auto; /* Сдвиг вправо */
+        margin-right: 2%;
+    }
+
+    /* Обеспечивает современный стиль для кнопки входа */
+    .login_button {
+        height: 1.5rem;
+        margin-left: auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login_button:hover {
+        background-color: #0056b3;
+    }
+
+    .login_button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    }
+
+    .login_button:active {
+        background-color: #004085;
+    }
+
+    .username_container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.5rem; /* Увеличена высота для лучшего центрирования */
+        border-radius: 10px;
+        text-align: center;
+        user-select: none;
+    }
+
+    .username_container h2 {
+        font-size: 1rem;
+        color: darkgray;
+        font-weight: bold;
+        margin: 0;
+        /*font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif*/
+    }
+
+    /*.username_container h2 span {*/
+    /*    font-weight: bold;*/
+    /*}*/
+    .profile_menu_button {
+        background: none;
+        border: none;
+        color: darkgray;
+        cursor: pointer;
+        margin-left: 8px;
+    }
+
+    .profile_menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 6rem;
+        transform: translateX(-50%);
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        z-index: 10;
+    }
+
+    .profile_link {
+        display: flex;
+        text-decoration: none;
+    }
+
+    .upload_button {
+        display: block;
+    }
+
+    .logout_button {
+        display: flex;
+    }
+
+    .profile_link, .upload_button, .logout_button {
+        background: none;
+        border: none;
+        color: #888888;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        text-align: left;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+    }
+
+    .profile_link:hover, .upload_button:hover, .logout_button:hover {
+        background: #f4f4f9;
+    }
+
+
+    .link-avatar-wrapper {
+        /*user-select: none;*/
+        /*border: none;*/
+        /*border-radius: 50%;*/
+        touch-action: manipulation; /* Отключает стандартное поведение браузера при касании */
+        -webkit-tap-highlight-color: transparent; /* Отключает выделение при касании */
+    }
+
+    .avatar-wrapper {
+        display: flex;
+        /*display: inline-block;*/
+        width: 70px;
+        height: 70px;
+        margin-left: auto;
+        overflow: hidden;
+        user-select: none;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        justify-self: center;
+        border-radius: 50%;
+        border: 0.1rem solid transparent;
+        background: repeating-linear-gradient(
+                #4b0082,
+                #4b0082,
+                #782563,
+                #ec1f63,
+                #782563,
+                #4b0082
+        );
+    }
+
+    .avatar-container {
+        /*display: inline-block;*/
+        display: flex;
+        width: 55px;
+        height: 55px;
+        overflow: hidden;
+        user-select: none;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        justify-self: center;
+        border-radius: 50%;
+        border: 0.2rem solid white;
+        background-color: #2b2d2e;
+    }
+
+    .avatar-img-container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        justify-self: center;
+        object-fit: cover;
+        background-color: #2b2d2e;
+    }
+
+    .avatar-img {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+        object-fit: cover;
+        background-color: #2b2d2e;
+    }
+    .avatar-img:active {
+        filter: brightness(150%); /* Увеличиваем яркость на 10% при удерживании кнопки мыши */
+    }
+    .link-avatar-wrapper:focus {
+        outline: none;
+    }
+}

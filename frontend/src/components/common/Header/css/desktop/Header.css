@@ -1,0 +1,223 @@
+/* Стили для компьютера (не мобильных устройств) */
+
+@media only screen and (min-width: 1081px) {
+    .panel_container {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        height: 5rem;
+        z-index: 60;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+        /*border-radius: 10px;*/
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавим тень */
+        padding: 1%;
+
+        box-sizing: border-box; /* Включаем отступы и границы в ширину и высоту */
+        /*overflow: hidden; !* Предотвращает выход дочерних элементов за пределы контейнера *!*/
+    }
+
+    .logo_container {
+        /*margin-left: 0.5%;*/
+    }
+
+    /* Стили для контейнера кнопок */
+    .button_container {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Расстояние между кнопками */
+        margin-left: auto; /* Сдвиг вправо */
+    }
+
+    /* Обеспечивает современный стиль для кнопки входа */
+    .login_button {
+        height: 1.5rem;
+        margin-left: auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 0.7rem;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login_button:hover {
+        background-color: #0056b3;
+    }
+
+    .login_button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    }
+
+    .login_button:active {
+        background-color: #004085;
+    }
+
+    .username_container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem; /* Увеличена высота для лучшего центрирования */
+        border-radius: 10px;
+        text-align: center;
+
+    }
+    .username_container h2 {
+        font-size: 1rem;
+        color: darkgray;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .username_container h2 span {
+        color: darkgray;
+        font-weight: bold;
+    }
+
+    .username {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        /*gap: 20px;*/
+    }
+
+    .profile_menu_button {
+        background: none;
+        border: none;
+        color: darkgray;
+        cursor: pointer;
+        margin-left: 8px;
+    }
+
+    .profile_menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 6rem;
+        transform: translateX(-50%);
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        z-index: 10;
+    }
+
+    .profile_link {
+        display: flex;
+        text-decoration: none;
+    }
+
+    .upload_button {
+        display: block;
+    }
+
+    .logout_button {
+        display: flex;
+    }
+
+    .profile_link, .upload_button, .logout_button {
+        background: none;
+        border: none;
+        color: #888888;
+        padding: 5px 10px;
+        font-size: 0.8rem;
+        text-align: left;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+    }
+
+    .profile_link:hover, .upload_button:hover, .logout_button:hover {
+        background: #f4f4f9;
+    }
+
+
+    .avatar-wrapper {
+        display: flex;
+        width: 65px;
+        height: 65px;
+        margin-left: auto; /* Прижимаем блок к правому краю flex-контейнера */
+        overflow: hidden;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        justify-self: center;
+        border-radius: 50%;
+        border: 2px solid transparent; /* Прозрачная граница */
+        background: repeating-linear-gradient(
+            to bottom,
+            #310062,
+            #782563,
+            #ec1f63,
+            #782563,
+            #310062
+        );
+        animation: gradientAnimation 5s linear infinite;
+        transition: filter 0.3s ease; /* Плавный переход для изменения свойства filter */
+    }
+
+    .avatar-container {
+        /*display: inline-block;*/
+        display: flex;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        user-select: none;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-self: center;
+        border-radius: 50%;
+        border: 4px solid white;
+        background-color: #2b2d2e;
+    }
+
+    .avatar-img-container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: center;
+        justify-self: center;
+        object-fit: cover;
+        background-color: #2b2d2e;
+    }
+
+
+    .avatar-img {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        user-select: none;
+        background-color: #2b2d2e;
+        object-fit: cover; /* Изображение заполняет контейнер, сохраняя пропорции */
+    }
+
+    .avatar-img:hover {
+        filter: brightness(130%); /* Увеличиваем яркость на 10% при наведении */
+    }
+
+    .avatar-img:active {
+        filter: brightness(110%); /* Увеличиваем яркость на 10% при удерживании кнопки мыши */
+    }
+}

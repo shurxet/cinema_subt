@@ -1,0 +1,17 @@
+.idea/
+.*_cache/
+__pycache__
+.pytest_cache
+.coverage
+venv/
+backend/.env
+development_containers/.env
+development_containers/static
+backend/static/
+backend/static/admin/
+backend/cinema/static/videos/
+backend/cinema_subt/static/images/poster/
+media/
+postgres_data/
+.env
+

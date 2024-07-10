@@ -1,0 +1,62 @@
+/* mobile max-width: 1080px */
+@media only screen and (max-width: 1080px) {
+    .season_menu {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .season {
+        width: 15%;
+        padding: 10px 20px;
+        font-size: 50%;
+        font-weight: bold;
+        text-transform: uppercase;
+        height: 100%;
+        color: black;
+        user-select: none;
+        background: linear-gradient(130deg, rgba(100, 130, 175, 0.5), darkgray);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s, transform 0.2s;
+        margin-right: 0.5%;
+        text-align: center;
+        border-radius: 5px;
+        margin-bottom: 0.5%;
+    }
+
+    .season:hover {
+       background: linear-gradient(130deg, darkgray, rgba(100, 130, 175, 0.5));
+       transform: translateY(-2px);
+    }
+}
+
+/* mobile max-width: 1080px orientation */
+@media only screen and (max-width: 1080px) and (orientation: landscape) {
+    .season-menu {
+        display: flex;
+        width: 100%;
+        margin: 0;
+    }
+
+    .season {
+        width: 10%;
+        padding: 10px 20px;
+        font-size: 50%;
+        font-weight: bold;
+        text-transform: uppercase;
+        height: 100%;
+        color: black;
+        user-select: none;
+        background: linear-gradient(130deg, rgba(100, 130, 175, 0.5), darkgray);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s, transform 0.2s;
+        margin-right: 0.5%;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .season:hover {
+       background: linear-gradient(130deg, darkgray, rgba(100, 130, 175, 0.5));
+       transform: translateY(-2px);
+    }
+}

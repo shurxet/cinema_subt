@@ -1,0 +1,37 @@
+.panel-container {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s; /* Применяем transition к opacity и visibility */
+
+
+    display: flex; /* Используем flex контейнер */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.panel-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.controls-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    text-content-align: center;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 4s, visibility 4s; /* Применяем transition к opacity и visibility */
+}
+
+.controls-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+}

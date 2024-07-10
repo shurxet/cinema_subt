@@ -1,0 +1,57 @@
+/*!* ipad *!*/
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {*/
+/*  body {*/
+/*        margin: 0 auto;*/
+/*        padding: 5%; !* Устанавливаем отступы внутри body на 10px *!*/
+/*    }*/
+
+/*    .container {*/
+/*        display: flex;*/
+/*        flex-wrap: wrap;*/
+/*        width: 100%; !* Ширина контейнера для примера *!*/
+/*        justify-content: space-between; !* Равномерное распределение по горизонтали *!*/
+/*        align-items: flex-start; !* Выравнивание блоков по верхнему краю *!*/
+/*        margin: 0;*/
+/*    }*/
+
+/*    .block {*/
+/*        background-image: url("{% static 'images/poster/thumb_7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg' %}");*/
+/*        background-size: 100% 100%; !* чтобы изображение занимало всю доступную площадь *!*/
+/*        background-position: center; !* чтобы изображение оставалось по центру блока *!*/
+/*        width: 19%;*/
+/*        height: 150px;*/
+/*        background-color: #ccc;*/
+/*        margin-bottom: 7%; !* Расстояние между блоками *!*/
+/*    }*/
+
+/*    .link-block {*/
+/*        width: 100%;*/
+/*        height: 100%;*/
+/*        background-color: #ccc;*/
+/*        text-decoration: none; !* Убираем подчёркивание *!*/
+/*    }*/
+
+/*    .poster-block {*/
+/*        height: 100%;*/
+/*        height: 100%;*/
+/*    }*/
+
+/*    .content-block {*/
+/*        !*top: 0;*!*/
+
+/*        width: 100%;*/
+/*        height: 20px;*/
+/*        background-color: white;*/
+/*        !*margin: 0;*!*/
+/*        !*bottom: 0;*!*/
+/*    }*/
+
+/*    .block-title {*/
+/*        !*bottom: 0;*!*/
+/*        width: 100%;*/
+/*        !*height: 30%;*!*/
+/*        background-color: white;*/
+/*        color: black;*/
+/*        !*margin-bottom: 5%; !* Расстояние между блоками *!*!*/
+/*    }*/
+/*}*/

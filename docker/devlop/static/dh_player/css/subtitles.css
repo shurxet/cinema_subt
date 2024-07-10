@@ -1,0 +1,90 @@
+.subtitles-menu-container {
+    position: absolute;
+    width: 150px;
+    /*top: -50%;*/
+    right: 10px;
+    /*background-color: #222121;*/
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 9999;
+    display: none;
+}
+
+.subtitles-menu-container.active {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.contLaCh {
+    position: relative;
+    width: 70px;
+    /*height: 50px;*/
+}
+
+
+.subtitles-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Равномерное распределение по горизонтали */
+    align-items: flex-start; /* Выравнивание блоков по верхнему краю */
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 8px;
+    /*background-color: #222121;*/
+    /*background: rgba(0, 0, 5, 0.5);*/
+    background: linear-gradient(to bottom, rgba(34, 49, 63, 0.8), rgba(34, 49, 63, 0.8), rgba(70, 62, 80, 0.8));
+    padding: 10px;
+    z-index: 999;
+}
+
+.subtitles-menu label {
+    /*margin-right: 2%;*/
+    display: block;
+    margin-bottom: 10px;
+    /*margin-left: 0;*/
+    color: white;
+    left: 0;
+    user-select: none;
+    font-size: 20px;
+}
+
+.subtitles-menu label input[type="checkbox"] {
+    position: absolute;
+    transform: scale(1.5); /* Увеличиваем размер в 2 раза */
+    margin-right: 10px;
+    margin-left: 10px;
+    right: 0;
+}
+
+
+.subtitles-container {
+    position: absolute;
+    transition: bottom 1s ease; /* Добавляем анимацию для свойства bottom */
+    left: 0; /* Можно также использовать right: 0; для выравнивания справа */
+    right: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.subtitles-container.hidden {
+    bottom: 0; /* Начальное значение для bottom при скрытии */
+}
+
+.subtitles {
+    left: 0; /* Можно также использовать right: 0; для выравнивания справа */
+    margin: 0;
+    padding: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.7em;
+    display: block;
+    color: white;
+}

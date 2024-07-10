@@ -1,0 +1,10 @@
+.user-container {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px; /* ”кажите нужную ширину вашего блока */
+
+    background-color: red;
+    padding: 20px;
+}
